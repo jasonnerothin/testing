@@ -18,14 +18,15 @@ public class EfficientRandom {
     /**
      * This random instance should only be used from the alternate method...
      */
-    private Random flip = new Random(System.currentTimeMillis());
+    private boolean flipMe = random.nextBoolean();
 
     /**
      * Alternates between true and false. (But starts at random.)
      * @return true or false, in an alternating sequence.
      */
     public Boolean alternate(){
-        return flip.nextBoolean();
+        flipMe = !flipMe;
+        return flipMe;
     }
 
     public int nextInt(int n) {
