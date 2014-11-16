@@ -32,4 +32,10 @@ public class EfficientRandom {
     public int nextInt(int n) {
         return random.nextInt(n);
     }
+
+    public double nextDouble(){ return random.nextDouble(); };
+
+    public long nextLong() {
+        return random.nextLong();
+    }
 }
